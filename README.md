@@ -62,7 +62,3 @@ El proyecto sigue metodología Scrum con las siguientes características:
 Se utiliza GitHub Actions para:
 - Validación de código con ESLint
 - Ejecución de tests automáticos con Jest
-
-## Licencia
-
-ISC

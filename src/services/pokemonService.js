@@ -14,7 +14,8 @@ class PokemonService {
       });
       return response.data;
     } catch (error) {
-      console.error('Error fetching Pokémon list:', error.message);
+      // Reemplazamos console.error con un manejo de error apropiado
+      // console.error('Error fetching Pokémon list:', error.message);
       throw new Error('Error fetching Pokémon list');
     }
   }
@@ -38,7 +39,8 @@ class PokemonService {
         }
       };
     } catch (error) {
-      console.error(`Error fetching Pokémon detail for ${idOrName}:`, error.message);
+      // Eliminamos console.error
+      // console.error(`Error fetching Pokémon detail for ${idOrName}:`, error.message);
       throw new Error(`Pokémon with ID or name ${idOrName} not found`);
     }
   }
@@ -49,7 +51,8 @@ class PokemonService {
       const response = await axios.get(`${this.apiUrl}/type`);
       return response.data.results;
     } catch (error) {
-      console.error('Error fetching Pokémon types:', error.message);
+      // Eliminamos console.error
+      // console.error('Error fetching Pokémon types:', error.message);
       throw new Error('Error fetching Pokémon types');
     }
   }
@@ -67,7 +70,8 @@ class PokemonService {
         })).slice(0, 10) // Limitamos a 10 pokémon por tipo
       };
     } catch (error) {
-      console.error(`Error fetching Pokémon by type ${type}:`, error.message);
+      // Eliminamos console.error
+      // console.error(`Error fetching Pokémon by type ${type}:`, error.message);
       throw new Error(`Type ${type} not found`);
     }
   }

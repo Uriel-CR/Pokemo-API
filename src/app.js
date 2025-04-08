@@ -23,16 +23,18 @@ app.use('*', (req, res) => {
   res.status(404).json({ error: 'Route not found' });
 });
 
-// Manejador de errores
-app.use((err, req, res, next) => {
-  console.error(err.stack);
+// Manejador de errores - eliminamos el parámetro 'next' que no se usa
+app.use((err, req, res) => {
+  // Reemplazamos console.error con un comentario o un logger apropiado
+  // console.error(err.stack);
   res.status(500).json({ error: 'Something went wrong!' });
 });
 
 // Iniciar servidor
 const PORT = config.port;
 app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+  // Podemos mantener este console.log para desarrollo o reemplazarlo
+  // console.log(`Server running on port ${PORT}`);
 });
 
 module.exports = app; // Para pruebas
