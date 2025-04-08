@@ -6,7 +6,7 @@ const { cacheMiddleware } = require('../middleware/cacheMiddleware');
 // Rutas con caché implementado
 router.get('/pokemon', cacheMiddleware, pokemonController.getPokemonList);
 router.get('/pokemon/:idOrName', cacheMiddleware, pokemonController.getPokemonDetail);
-router.get('/types', cacheMiddleware, pokemonController.getPokemonTypes);
-router.get('/types/:type', cacheMiddleware, pokemonController.getPokemonByType);
+router.get('/type', cacheMiddleware, pokemonController.getPokemonTypes);
+router.get('/type/:type', cacheMiddleware, pokemonController.getPokemonByType);
 
 module.exports = router;
